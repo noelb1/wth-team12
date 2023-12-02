@@ -1,11 +1,3 @@
-#!/bin/bash
-
-echo "Starting job1"
-
-echo "Executing step1"
-echo "step1"
-
-echo "Executing step2"
-echo "step2"
-
-echo "Job1 completed"
+int value = 0;
+value++;
+Console.WriteLine(value);
