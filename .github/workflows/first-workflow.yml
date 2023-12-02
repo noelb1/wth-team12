@@ -13,16 +13,15 @@ jobs:
       - run: bats -v
 
   job2:
+    jobs:
+  cow:
+    name: Cowsays
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Run Crossways action
-      uses: owner/repo@version  # replace with actual repository and version
-
-    - name: Run a multi-line script
-      run: |
+    - name: Ship it
+      uses: mscoutermarsh/cowsays-action@master
+      with:
+        text: 'ship ship ship!'
+        color: 'red
         echo Add other actions to build,
         echo test, and deploy your project.
