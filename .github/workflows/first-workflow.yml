@@ -12,16 +12,18 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 
+ 
   job2:
-    jobs:
-  cow:
-    name: Cowsays
     runs-on: ubuntu-latest
+
     steps:
-    - name: Ship it
-      uses: mscoutermarsh/cowsays-action@master
-      with:
-        text: 'ship ship ship!'
-        color: 'red
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run Crossways action
+      uses: mscoutermarsh/cowsays-action@master  # replace with actual repository and version
+
+    - name: Run a multi-line script
+      run: |
         echo Add other actions to build,
         echo test, and deploy your project.
